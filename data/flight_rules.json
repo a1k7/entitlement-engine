@@ -1,0 +1,12 @@
+{
+  "EU261": {
+    "delay_hours": 3,
+    "refund_eur": 250,
+    "conditions": ["departure_from_eu", "eu_airline"]
+  },
+  "IN_DGCA": {
+    "delay_hours": 2,
+    "refund_inr": 5000,
+    "conditions": ["domestic_flight"]
+  }
+}
