@@ -1,0 +1,4 @@
+{
+  "payment_grace_days": 7,
+  "monthly_interest_percent": 2
+}
