@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Entitlement Check</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <header>
+      <h1>Entitlement Check</h1>
+      <p class="subtitle">
+        Check what you’re entitled to — automatically.
+      </p>
+    </header>
+
+    <!-- ================= SALARY ================= -->
+    <section class="card">
+      <h2>Salary Non-Payment</h2>
+
+      <label>Employer</label>
+      <input id="employer" placeholder="Company name" />
+
+      <label>Salary Amount</label>
+      <input id="amount" type="number" placeholder="60000" />
+
+      <label>Salary Due Date</label>
+      <input id="date" type="date" />
+      <small class="helper">
+        The date your salary was supposed to be paid.
+      </small>
+
+      <label>Mode</label>
+      <select id="mode">
+        <option value="PREVIEW">Preview (no action)</option>
+        <option value="SHADOW">Monitor only</option>
+        <option value="EXECUTE" disabled>Execute (beta)</option>
+      </select>
+
+      <button onclick="checkSalaryEntitlement()">
+        Check salary entitlement
+      </button>
+    </section>
+
+    <!-- ================= FLIGHT ================= -->
+    <section class="card">
+      <h2>Flight Delay Compensation</h2>
+
+      <label>Flight Number</label>
+      <input id="flightNumber" placeholder="AI302" />
+
+      <label>Delay (hours)</label>
+      <input id="delayHours" type="number" placeholder="4" />
+
+      <label>Region</label>
+      <select id="region">
+        <option value="IN">India</option>
+        <option value="EU">Europe</option>
+      </select>
+
+      <label>Flight Date</label>
+      <input id="flightDate" type="date" />
+
+      <label>Mode</label>
+      <select id="flightMode">
+        <option value="PREVIEW">Preview (no action)</option>
+        <option value="SHADOW">Monitor only</option>
+        <option value="EXECUTE" disabled>Execute (beta)</option>
+      </select>
+
+      <button onclick="checkFlightEntitlement()">
+        Check flight entitlement
+      </button>
+    </section>
+
+    <!-- ================= RESULT ================= -->
+    <section class="result-card hidden" id="resultCard">
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+
+      <div class="meta">
+        <span id="checkedTime"></span><br />
+        <span id="decisionId"></span>
+      </div>
+
+      <button class="secondary" onclick="toggleDetails()">
+        View technical details
+      </button>
+
+      <pre id="details" class="hidden"></pre>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
